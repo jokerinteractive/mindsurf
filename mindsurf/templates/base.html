@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MindSurf</title>
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic" rel="stylesheet">
+    <link href="{# TODO: minify #}{{ url_for('static', filename='css/normalize.css') }}" rel="stylesheet">
+    <link href="{# TODO: minify #}{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/outdatedbrowser.min.css') }}" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      
+    </header>
+
+    <div id="outdated">
+     <h6>Ваш браузер устарел!</h6>
+     <p>Обновите ваш браузер для правильного отображения этого сайта. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/ru">Обновить мой браузер</a></p>
+     <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Закрыть">&times;</a></p>
+    </div>
+    {#% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-info" role="alert">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %#}
+
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+            
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/outdatedbrowser.min.js') }}"></script>
+    <script src="{# TODO: minify #}{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+      function addLoadEvent(func) {
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function') {
+          window.onload = func;
+        } else {
+          window.onload = function() {
+            if (oldonload) {
+              oldonload();
+            }
+            func();
+          }
+        }
+      }
+      addLoadEvent(function(){
+        outdatedBrowser({
+          bgColor: '#f25648',
+          color: '#ffffff',
+          lowerThan: 'transform',
+          languagePath: ''
+        })
+      });
+    </script>
+  </body>
+</html>
