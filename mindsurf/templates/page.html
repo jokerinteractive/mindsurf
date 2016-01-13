@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="main">
+    <header class="main_header">
+      <h2>{% for item in menu.menu %}{% if item.alias == menu.current %}{{ item.title }}{% endif %}{% endfor %}</h2>
+    </header>
+</article>
+{% endblock %}
