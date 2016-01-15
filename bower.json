@@ -1,0 +1,23 @@
+{
+  "name": "mindsurf.ru",
+  "version": "0.0.1",
+  "authors": [
+    "Joker Interactive <info@jokerinteractive.ru>"
+  ],
+  "description": "Проект MindSurf",
+  "private": true,
+  "main": "bower.json",
+  "license": "Enterprise",
+  "homepage": "mindsurf.ru",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "normalize.css": "^3.0.3",
+    "outdated-browser": "^1.1.0"
+  }
+}
