@@ -1,0 +1,23 @@
+html,
+body {
+  position: relative;
+  min-width: 320px;
+  color: $base-color;
+  background-color: $base-bg-color;
+  font-family: $ptsans;
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 23px;
+
+  @include tablet {
+    font-size: 29px;
+  }
+  
+  @include desktop {
+    font-size: 36px;
+  }
+}
