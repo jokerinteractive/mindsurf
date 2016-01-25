@@ -4,7 +4,6 @@ from flask.ext.login import LoginManager
 from flask.ext.sqlalchemy import SQLAlchemy
 # from flask.ext.mail import Mail, Message
 # from flask.ext.admin import Admin
-from . import views
 
 
 app = Flask(__name__)
@@ -16,3 +15,5 @@ login_manager.init_app(app)
 db = SQLAlchemy(app)
 # mail = Mail(app)
 # admin = Admin(app, name='AutoRes')
+
+from . import views
