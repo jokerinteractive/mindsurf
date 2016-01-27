@@ -11,8 +11,41 @@
   </head>
 
   <body>
-    <header>
-      
+    <header class="navigation">
+      <a class="logo" href="#">MindSurf</a>
+      <dl>
+        <dt>Медитация с гидом</dt>
+        <dd>
+          <ul class="meditation">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+          </ul>
+        </dd>
+        <dt href="#">Свободный полёт</dt>
+        <dd>
+          <ul class="freeFly">
+            <li>2 минуты</li>
+            <li>5 минут</li>
+            <li>10 минут</li>
+            <li>15 минут</li>
+            <li>20 минут</li>
+          </ul>
+        </dd>
+        <dt href="#">Пространства</dt>
+        <dd></dd>
+        <dt href="#">Информация</dt>
+        <dd></dd>
+      </dl>
+      <div class="share">
+        <a class="share_vk" href="#">vk</a>
+        <a class="share_fb" href="#">fb</a>
+        <a class="share_tw" href="#">tw</a>
+      </div>
     </header>
 
     <div id="outdated">
@@ -31,8 +64,11 @@
     {% block content %}
     {% endblock %}
 
-    <footer>
-            
+    <footer class="controls">
+      <a class="prev">&lt;</a>      
+      <a class="play">-</a>      
+      <a class="stop">|</a>      
+      <a class="next">&gt;</a>      
     </footer>
 
     <script src="{{ url_for('static', filename='js/outdatedbrowser.min.js') }}"></script>
